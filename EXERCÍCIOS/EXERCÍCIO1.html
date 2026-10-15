@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Sobre seletores compartilhados</title>
+
+    <style>
+        * {
+            background-color: beige;
+        }
+        h1 {
+            text-align: center;
+            background-color: bisque;
+            color: brown;
+            border-radius: 8px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        h3 {
+            text-align: center;
+            color: brown;
+            font-size: 25px;
+            border-radius: 8px;
+        }
+
+        .explicacao {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        thead th {
+            background-color: burlywood;
+            color: rgb(131, 43, 13);
+            
+        }
+
+        tbody td {
+            text-align: center;
+            background-color: burlywood;
+        }
+
+        table {
+            width: 50%; /* Defina uma largura para a tabela */
+            margin: 0 auto; /* Centraliza horizontalmente */
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+  }
+    </style>
+</head>
+<body>
+    <h1>Seletor de atributos</h1>
+    <h3>Seleciona elementos que possuem um atributo específico.</h3>
+    <p class="explicacao">EX: input[type="text"] {color: blue;}</p>
+
+    <hr>
+
+    <h1>Seletor Descendente</h1>
+    <h3>Seleciona elementos que possuem um atributo específico.</h3>
+    <p class="explicacao">EX: div p {color: red;}</p>
+
+    <hr>
+
+    <h1>Seletor de filho direto</h1>
+    <h3>Seleciona apenas os elementos que são filhos diretos de outro elemento.</h3>
+    <p class="explicacao">EX: div > p {color: green;}</p>
+
+    <hr>
+
+    <h1>Seletor de Adjacente Direto</h1>
+    <h3>Seleciona o elemento que vem imediatamente depois de outro, desde que ambos tenham o mesmo elemento pai.</h3>
+    <p class="explicacao">EX: h1 + p {color: orange;}</p>
+    <hr>
+
+    <h1>Seletor Irmãos Gerais</h1>
+    <h3>Seleciona todos os elementos irmãos que aparecem depois de um elemento específico.</h3>
+    <p class="explicacao">EX: h1 ~ p {color: purple;}</p>
+
+    <hr>
+
+    <h1>Seletor Pseudoclasse</h1>
+    <h3>Seleciona um elemento em um estado específico ou que atende a uma condição.</h3>
+    <p class="explicacao">EX: button:hover {background-color: blue;}</p>
+
+    <hr>
+
+    <h1>Seletor de Pseudoelemento</h1>
+    <h3>Seleciona ou estiliza uma parte específica de um elemento ou cria conteúdo visual.</h3>
+    <p class="explicacao">EX: p::first-letter {color: red;}</p>
+
+    <h2>Resumo em uma tabela para melhor entendimento:</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Seletor</th>
+                <th>Símbolo</th>
+                <th>Função</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th>Atributo</th>
+                <th>[ ]</th>
+                <td>Seleciona pelo atributo</td>
+            </tr>
+
+            <tr>
+                <th>Descendente</th>
+                <th>Espaço</th>
+                <td>Seleciona elementos dentro de outros</td>
+            </tr>
+
+            <tr>
+                <th>Filho Direto</th>
+                <th>></th>
+                <td>Seleciona apenas filhos diretos</td>
+            </tr>
+
+            <tr>
+                <th>Adjacente Direto</th>
+                <th>+</th>
+                <td>Seleciona o próximo irmão imediato</td>
+            </tr>
+
+            <tr>
+                <th>Irmãos Gerais</th>
+                <th>~</th>
+                <td>Seleciona os irmãos posteriores</td>
+            </tr>
+
+            <tr>
+                <th>Pseudoclasse</th>
+                <th>:</th>
+                <td>Seleciona um estado ou condição</td>
+            </tr>
+
+            <tr>
+                <th>Pseudoelemento</th>
+                <th>: :</th>
+                <td>Estiliza uma parte do elemento</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
